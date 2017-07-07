@@ -364,6 +364,7 @@ public class main extends javax.swing.JFrame {
 
             bloquearCampos();
             lerConfig();
+            btnSalvar.setVisible(false);
         }
 
     }//GEN-LAST:event_btnRestaurarActionPerformed
@@ -379,7 +380,7 @@ public class main extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSalvarActionPerformed
 
     private void btnTestarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTestarActionPerformed
-                
+
         CarregarConfig p = new CarregarConfig();
         String DRIVER = "com.mysql.jdbc.Driver";
         String URL = "jdbc:mysql://" + p.getValor("host") + ":" + p.getValor("porta") + "/" + p.getValor("db");
@@ -391,9 +392,9 @@ public class main extends javax.swing.JFrame {
             DriverManager.getConnection(URL, USER, PASS);
             JOptionPane.showMessageDialog(null, "<html><body align=center>Conectado com sucesso!");
         } catch (ClassNotFoundException | SQLException ex) {
-            JOptionPane.showMessageDialog(null, "<html><body align=center>Erro de conexão! Verifique as configurações! ( "+ex+" )");
+            JOptionPane.showMessageDialog(null, "<html><body align=center>Erro de conexão! Verifique as configurações! ( " + ex + " )");
         }
-            
+
     }//GEN-LAST:event_btnTestarActionPerformed
 
     /**
