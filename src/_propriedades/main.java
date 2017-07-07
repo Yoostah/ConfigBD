@@ -21,7 +21,7 @@ public class main extends javax.swing.JFrame {
      */
     public main() {
         initComponents();
-        btnSalvar.setVisible(false);
+        btnSalvar3.setVisible(false);
         lerConfig();
     }
 
@@ -79,16 +79,19 @@ public class main extends javax.swing.JFrame {
         txtBanco = new javax.swing.JTextField();
         btnEditar = new javax.swing.JButton();
         btnRestaurar = new javax.swing.JButton();
-        btnSalvar = new javax.swing.JButton();
+        btnSalvar3 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Configurações do Sistema");
         setMinimumSize(new java.awt.Dimension(938, 580));
         setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(153, 153, 153));
         jPanel1.setMinimumSize(new java.awt.Dimension(938, 475));
         jPanel1.setPreferredSize(new java.awt.Dimension(938, 575));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         titulo.setBackground(new java.awt.Color(255, 255, 255));
         titulo.setFont(new java.awt.Font("Microsoft Yi Baiti", 1, 25)); // NOI18N
@@ -100,11 +103,12 @@ public class main extends javax.swing.JFrame {
         titulo.setName(""); // NOI18N
         titulo.setOpaque(true);
         titulo.setPreferredSize(new java.awt.Dimension(399, 34));
+        jPanel1.add(titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 15, 638, 36));
 
-        jPanel2.setBackground(new java.awt.Color(140, 140, 140));
+        jPanel2.setBackground(new java.awt.Color(45, 185, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "  BANCO DE DADOS  ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Verdana", 1, 10))); // NOI18N
 
-        jPanel3.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel3.setBackground(new java.awt.Color(45, 185, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "  USUÁRIO DO BANCO  ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Verdana", 1, 10))); // NOI18N
 
         lblUsuario.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
@@ -117,7 +121,7 @@ public class main extends javax.swing.JFrame {
 
         txtSenha.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
 
-        btnTestar.setBackground(new java.awt.Color(153, 153, 153));
+        btnTestar.setBackground(new java.awt.Color(255, 255, 255));
         btnTestar.setFont(new java.awt.Font("Verdana", 0, 9)); // NOI18N
         btnTestar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/_imagens/conectar.png"))); // NOI18N
         btnTestar.setText("Testar Conexão");
@@ -172,7 +176,7 @@ public class main extends javax.swing.JFrame {
         btnTestar.setVerticalTextPosition(SwingConstants.BOTTOM);
         btnTestar.setHorizontalTextPosition(SwingConstants.CENTER);
 
-        jPanel4.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel4.setBackground(new java.awt.Color(45, 185, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "  CONEXÃO COM  BANCO  ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Verdana", 1, 10))); // NOI18N
 
         lblBanco.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
@@ -249,7 +253,9 @@ public class main extends javax.swing.JFrame {
                 .addGap(24, 24, 24))
         );
 
-        btnEditar.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 156, -1, -1));
+
+        btnEditar.setBackground(new java.awt.Color(255, 255, 255));
         btnEditar.setFont(new java.awt.Font("Verdana", 0, 9)); // NOI18N
         btnEditar.setForeground(new java.awt.Color(153, 153, 153));
         btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/_imagens/edit.png"))); // NOI18N
@@ -265,8 +271,9 @@ public class main extends javax.swing.JFrame {
         });
         btnEditar.setVerticalTextPosition(SwingConstants.BOTTOM);
         btnEditar.setHorizontalTextPosition(SwingConstants.CENTER);
+        jPanel1.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 96, -1, -1));
 
-        btnRestaurar.setBackground(new java.awt.Color(153, 153, 153));
+        btnRestaurar.setBackground(new java.awt.Color(255, 255, 255));
         btnRestaurar.setForeground(new java.awt.Color(153, 153, 153));
         btnRestaurar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/_imagens/restaurar.png"))); // NOI18N
         btnRestaurar.setToolTipText("Restaurar Configurações Originais");
@@ -281,67 +288,29 @@ public class main extends javax.swing.JFrame {
         });
         btnRestaurar.setVerticalTextPosition(SwingConstants.BOTTOM);
         btnRestaurar.setHorizontalTextPosition(SwingConstants.CENTER);
+        jPanel1.add(btnRestaurar, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 96, -1, -1));
 
-        btnSalvar.setBackground(new java.awt.Color(153, 153, 153));
-        btnSalvar.setForeground(new java.awt.Color(153, 153, 153));
-        btnSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/_imagens/save.png"))); // NOI18N
-        btnSalvar.setToolTipText("Salvar");
-        btnSalvar.setMargin(new java.awt.Insets(2, 0, 2, 0));
-        btnSalvar.setMaximumSize(new java.awt.Dimension(45, 45));
-        btnSalvar.setMinimumSize(new java.awt.Dimension(45, 45));
-        btnSalvar.setPreferredSize(new java.awt.Dimension(45, 45));
-        btnSalvar.addActionListener(new java.awt.event.ActionListener() {
+        btnSalvar3.setBackground(new java.awt.Color(255, 255, 255));
+        btnSalvar3.setForeground(new java.awt.Color(153, 153, 153));
+        btnSalvar3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/_imagens/save.png"))); // NOI18N
+        btnSalvar3.setToolTipText("Salvar");
+        btnSalvar3.setMargin(new java.awt.Insets(2, 0, 2, 0));
+        btnSalvar3.setMaximumSize(new java.awt.Dimension(45, 45));
+        btnSalvar3.setMinimumSize(new java.awt.Dimension(45, 45));
+        btnSalvar3.setPreferredSize(new java.awt.Dimension(45, 45));
+        btnSalvar3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSalvarActionPerformed(evt);
+                btnSalvar3ActionPerformed(evt);
             }
         });
-        btnSalvar.setVerticalTextPosition(SwingConstants.BOTTOM);
-        btnSalvar.setHorizontalTextPosition(SwingConstants.CENTER);
+        btnSalvar3.setVerticalTextPosition(SwingConstants.BOTTOM);
+        btnSalvar3.setHorizontalTextPosition(SwingConstants.CENTER);
+        jPanel1.add(btnSalvar3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 510, -1, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(150, 150, 150)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnEditar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnRestaurar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(btnSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(titulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(150, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnEditar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnRestaurar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(15, 15, 15)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(90, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/_imagens/bg.png"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 576, Short.MAX_VALUE)
-        );
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 576));
 
         pack();
         setLocationRelativeTo(null);
@@ -349,7 +318,7 @@ public class main extends javax.swing.JFrame {
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
         desbloquearCampos();
-        btnSalvar.setVisible(true);
+        btnSalvar3.setVisible(true);
     }//GEN-LAST:event_btnEditarActionPerformed
 
     private void btnRestaurarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRestaurarActionPerformed
@@ -364,20 +333,10 @@ public class main extends javax.swing.JFrame {
 
             bloquearCampos();
             lerConfig();
-            btnSalvar.setVisible(false);
+            btnSalvar3.setVisible(false);
         }
 
     }//GEN-LAST:event_btnRestaurarActionPerformed
-
-    private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
-        CarregarConfig p = new CarregarConfig();
-
-        p.setValor(txtHost.getText(), txtPorta.getText(), txtBanco.getText(), txtUsuario.getText(), txtSenha.getText());
-
-        bloquearCampos();
-        lerConfig();
-        btnSalvar.setVisible(false);
-    }//GEN-LAST:event_btnSalvarActionPerformed
 
     private void btnTestarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTestarActionPerformed
 
@@ -396,6 +355,16 @@ public class main extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_btnTestarActionPerformed
+
+    private void btnSalvar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvar3ActionPerformed
+        CarregarConfig p = new CarregarConfig();
+
+        p.setValor(txtHost.getText(), txtPorta.getText(), txtBanco.getText(), txtUsuario.getText(), txtSenha.getText());
+
+        bloquearCampos();
+        lerConfig();
+        btnSalvar3.setVisible(false);
+    }//GEN-LAST:event_btnSalvar3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -436,8 +405,9 @@ public class main extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEditar;
     private javax.swing.JButton btnRestaurar;
-    private javax.swing.JButton btnSalvar;
+    private javax.swing.JButton btnSalvar3;
     private javax.swing.JButton btnTestar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
